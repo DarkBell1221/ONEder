@@ -10,7 +10,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
-    <title>Alumnos</title>
+    <title>ONEder</title>
 </head>
 <body>
     <!-- Nombre de la etiqueta Ejemplo: INPUT -->
@@ -18,10 +18,10 @@
     <!-- . para CLASS -->
 
     <!-- form index 0 -->
-    <!-- #frmAlumnos -->
+    <!-- #frmONEder -->
     <!-- .formulario index 0 -->
     <div class="container">
-        <form method="post" id="frmAlumnos" class="formulario">
+        <form method="post" id="frmONEder" class="formulario">
             <div class="mb-1">
                 <label id="lblMatriculaFA" for="txtMatriculaFA">Matrícula:</label>
                 <input type="number" name="txtMatriculaFA" id="txtMatriculaFA" class="form-control" required="true" minlength="8" maxlength="8" data-rule-digits="true">
@@ -34,7 +34,7 @@
                 <button id="btnGuardarFA" name="btnGuardarFA" class="btn btn-dark">Guardar</button>
             </div>
         </form>
-        <div id="divAlumnos"></div>
+        <div id="divONEder"></div>
     
         <!-- table index 0 -->
         <table class="table table-sm">
@@ -44,7 +44,7 @@
                     <th>Nombre y Apellido</th>
                 </tr>
             </thead>
-            <tbody id="tbodyAlumnos"></tbody>
+            <tbody id="tbodyONEder"></tbody>
         </table>
     </div>
 
@@ -52,7 +52,7 @@
 
     <script>
         window.addEventListener("load", function (event) {
-            $("#frmAlumnos").validate({
+            $("#frmONEder").validate({
                 messages: {
                     txtMatriculaFA: {
                         required: "Ingresa la matrícula",
@@ -76,10 +76,10 @@
                 }
             })
 
-            $("#frmAlumnos").submit(function (event) {
+            $("#frmONEder").submit(function (event) {
                 event.preventDefault()
 
-                $.post("/alumnos/guardar", $(this).serialize(), function (respuesta) {
+                $.post("/ONEder/guardar", $(this).serialize(), function (respuesta) {
                     console.log(respuesta)
                 })
             })
