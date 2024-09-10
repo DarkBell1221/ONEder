@@ -9,11 +9,11 @@ app = Flask(__name__)
 def index():
     return "<p>Hola, Mundo!</p>"
 
-@app.route("/alumnos")
+@app.route("/ONEder")
 def alumnos():
-    return render_template("alumnos.html")
+    return render_template("ONEder.html")
 
-@app.route("/alumnos/guardar", methods=["POST"])
+@app.route("/ONDER/guardar", methods=["POST"])
 def alumnosGuardar():
 
     matricula    =request.form["txtMatriculaFA"]
