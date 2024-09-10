@@ -10,11 +10,11 @@ def index():
     return "<p>Hola, Mundo!</p>"
 
 @app.route("/ONEder")
-def alumnos():
+def ONEder():
     return render_template("ONEder.html")
 
-@app.route("/ONDER/guardar", methods=["POST"])
-def alumnosGuardar():
+@app.route("/ONEder/guardar", methods=["POST"])
+def ONEderGuardar():
 
     matricula    =request.form["txtMatriculaFA"]
     nombreapellido    =request.form["txtNombreApellidoFA"]
